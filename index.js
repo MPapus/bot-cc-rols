@@ -15,7 +15,10 @@ client.on('message', msg => {
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'guide') return msg.channel.send('https://github.com/MPapus/bot-cc-rols#readme');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
-    else if (command === 'hola') return msg.channel.send(user.getProfile(args[0].substr(1)).getClan());
+    else if (command === 'hola') { 
+        let playerProfile = user.getProfile(args[0].substr(1));
+        return msg.channel.send(playerProfile.clanTag);
+    }
 });
 
 client.login(process.env.TOKEN);
