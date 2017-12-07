@@ -15,7 +15,7 @@ client.on('message', msg => {
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'guide') return msg.channel.send('https://github.com/MPapus/bot-cc-rols#readme');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
-    else if (command === 'hola') user.getProfile(args[0].substr(1)).then(player => msg.channel.send(player));
+    else if (command === 'hola') return msg.channel.send(user.getProfile(args[0].substr(1)).getClan());
 });
 
 client.login(process.env.TOKEN);
@@ -48,5 +48,5 @@ app.listen(port, () => {
 
 // pings server every 15 minutes to prevent dynos from sleeping
 setInterval(() => {
- http.get('http://discordjs-heroku.herokuapp.com');
+ http.get('http://bot-cc-rols.herokuapp.com');
 }, 900000);
