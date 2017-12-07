@@ -16,6 +16,9 @@ client.on('message', msg => {
     if (command === 'guide') return msg.channel.send('https://github.com/MPapus/bot-cc-rols#readme');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
     else if (command === 'hola') { 
+        if (args.length === 0) {
+            return msg.channel.send('No heu ingressat cap tag vàlid')
+        }
         let playerProfile = user.getProfile(args[0].substr(1));
         return msg.channel.send(playerProfile.clanTag);
     }
