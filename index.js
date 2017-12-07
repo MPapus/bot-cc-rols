@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const cr = require('cr.js');
 
-let user = new cr.Client();
+let clash = new cr.Client();
 
 client.on('ready', () => {
     client.user.setGame('Clash Royale');
@@ -20,7 +20,7 @@ client.on('message', msg => {
             return msg.channel.send('No heu ingressat cap tag de CR');
         }
         else {
-            let playerProfile = user.getProfile(args[0]);
+            let playerProfile = clash.getProfile('22RLYPLYC');
             return msg.channel.send(playerProfile.clanTag);   
         }
     }
