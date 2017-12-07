@@ -17,7 +17,7 @@ client.on('message', msg => {
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
     else if (command === 'hola') { 
         if (args.length === 0) {
-            return msg.channel.send('No heu ingressat cap tag vàlid')
+            return msg.channel.send('No heu ingressat cap tag de CR')
         }
         else {
             let playerProfile = user.getProfile(args[0].substr(1));
