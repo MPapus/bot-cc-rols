@@ -20,7 +20,7 @@ client.on('message', msg => {
             return msg.channel.send('No heu ingressat cap tag de CR');
         }
         else {
-            let playerProfile = clash.getProfile('22RLYPLYC');
+            let playerProfile = clash.getProfile('22RLYPLYC').then(player console.log(player));
             return msg.channel.send(playerProfile.clanTag);   
         }
     }
