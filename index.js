@@ -20,7 +20,7 @@ client.on('message', msg => {
             return msg.channel.send('No heu ingressat cap tag de CR');
         }
         else {
-            let playerProfile = user.getProfile(args[0].substr(1));
+            let playerProfile = user.getProfile(args[0]);
             return msg.channel.send(playerProfile.clanTag);   
         }
     }
