@@ -1,6 +1,7 @@
 // Discord.js bot
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const cr = require('cr.js');
 
 let user = new cr.Client();
 
@@ -14,7 +15,7 @@ client.on('message', msg => {
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'guide') return msg.channel.send('https://github.com/MPapus/bot-cc-rols#readme');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
-    else if (command === 'hola') user.getProfile(args[0].substr(1)).then(player => return msg.channel.send(player));
+    else if (command === 'hola') user.getProfile(args[0].substr(1)).then(player => msg.channel.send(player));
 });
 
 client.login(process.env.TOKEN);
@@ -23,7 +24,6 @@ client.login(process.env.TOKEN);
 const http = require('http');
 const express = require('express');
 const app = express();
-const cr = require('cr.js');
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku

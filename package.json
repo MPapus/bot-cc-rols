@@ -27,6 +27,8 @@
   "homepage": "https://github.com/MPapus/bot-cc-rols#readme",
   "dependencies": {
     "cr.js": "^0.2.2",
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.2.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
   }
 }
