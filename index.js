@@ -19,8 +19,10 @@ client.on('message', msg => {
         if (args.length === 0) {
             return msg.channel.send('No heu ingressat cap tag vàlid')
         }
-        let playerProfile = user.getProfile(args[0].substr(1));
-        return msg.channel.send(playerProfile.clanTag);
+        else {
+            let playerProfile = user.getProfile(args[0].substr(1));
+            return msg.channel.send(playerProfile.clanTag);   
+        }
     }
 });
 
