@@ -3,14 +3,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setGame('https://git.io/d.js-heroku');
+    client.user.setGame('Clash Royale');
 });
 
 client.on('message', msg => {
     if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
+    if (command === 'guide') return msg.channel.send('https://github.com/MPapus/bot-cc-rols#readme');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 

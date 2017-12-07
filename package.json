@@ -1,10 +1,10 @@
 {
-  "name": "botCC",
+  "name": "bot-rols-cc",
   "version": "1.0.0",
   "description": "Bot per assignar rols segons el clan de Crema Catalana al joc de Clash Royale",
   "main": "index.js",
   "engines": {
-    "node": "9.2.0",
+    "node": "8.9.2",
     "npm": "5.5.1"
   },
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MPapus/botCC.git"
+    "url": "git+https://github.com/MPapus/bot-cc-rols.git"
   },
   "keywords": [
     "heroku",
@@ -22,17 +22,11 @@
   "author": "MPapus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MPapus/botCC/issues"
+    "url": "https://github.com/MPapus/bot-cc-rols/issues"
   },
-  "homepage": "https://github.com/MPapus/botCC#readme",
+  "homepage": "https://github.com/MPapus/bot-cc-rols#readme",
   "dependencies": {
-    "bufferutil": "^3.0.3",
-    "discord.js": "^11.2.1",
-    "ejs": "^2.5.6",
-    "erlpack": "^0.1.2",
-    "express": "^4.15.3",
-    "node-opus": "^0.2.7",
-    "opusscript": "0.0.4",
-    "uws": "^9.14.0"
+    "cr.js": "^0.2.2",
+    "discord.js": "^11.2.1"
   }
 }
